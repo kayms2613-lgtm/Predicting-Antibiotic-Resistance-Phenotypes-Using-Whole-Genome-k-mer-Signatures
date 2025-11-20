@@ -16,6 +16,79 @@ Four models—**Logistic Regression, Random Forest, SVM, and Gradient Boosting**
 
 The notebook produces key visualizations including ROC curves, confusion matrices, feature-importance plots, and class-distribution summaries to support interpretation. Although the dataset is small, the balanced class distribution and consistent preprocessing steps strengthen the reliability of the findings.
 
+
+🚀 How to Run the Project
+
+This project can be run using the main Python script, the Jupyter notebook, or directly through Google Colab. Make sure the dataset is already placed inside the dataset/ folder.
+
+✅ 1. Run the Python Script (Local Machine)
+Folder Layout
+project/
+│
+├── src/
+│   └── Predicting_Antibiotic_Resistance_Phenotypes_Using_Whole-Genome_k-mer_Signatures.py
+│
+├── dataset/
+│   ├── genome/        ← FASTA genome files
+│   └── phenotype/     ← phenotype CSV/TSV file
+
+
+Run the Pipeline
+python src/Predicting_Antibiotic_Resistance_Phenotypes_Using_Whole-Genome_k-mer_Signatures.py \
+    --genome_dir dataset/genome \
+    --pheno_file dataset/phenotype/phenotype.csv \
+
+This Script Will Automatically:
+
+Load phenotype metadata
+
+Parse FASTA genomes
+
+Extract 31-mer signatures
+
+Build a 10,000-feature matrix
+
+Train LR, RF, SVM, and GBM models
+
+Generate ROC curves, confusion matrices, and feature-importance plots
+
+
+✅ 2. Run in Google Colab
+Upload datasets:
+from google.colab import files
+files.upload()
+
+Create folders:
+!mkdir -p dataset/genome dataset/phenotype outputs
+
+Move your uploaded files into these folders, then open:
+notebooks/AMR_kmer_analysis.ipynb
+
+
+Run:
+Runtime → Run all
+
+Colab will execute the full k-mer ML pipeline.
+
+✅ 3. Run from GitHub Clone
+Clone repo:
+git clone https://github.com/yourusername/kayms2613-lgtm
+cd yourrepo
+
+Install dependencies:
+pip install -r requirements.txt
+
+Ensure dataset placement:
+dataset/
+   genome/*.fasta
+   phenotype/*.csv
+
+Run either:
+Python script
+python src/Predicting_Antibiotic_Resistance_Phenotypes_Using_Whole-Genome_k-mer_Signatures.py
+
+Or the notebook
+jupyter notebook notebooks/AMR_kmer_analysis.ipynb
 ---
 
 ## 📂 Dataset
