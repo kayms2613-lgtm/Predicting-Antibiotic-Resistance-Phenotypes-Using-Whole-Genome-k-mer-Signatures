@@ -18,7 +18,7 @@ The notebook produces key visualizations including ROC curves, confusion matrice
 
 ---
 
-🚀 How to Run the Project
+##🚀 How to Run the Project
 
 This project can be run using the main Python script, the Jupyter notebook, or directly through Google Colab. Make sure the dataset is already placed inside the dataset/ folder.
 
