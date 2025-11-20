@@ -1,51 +1,57 @@
-AI Usage & Reproducibility Statement
+## AI Usage & Reproducibility Statement
 
-This project used AI tools (specifically ChatGPT) only for writing support, organization, and clarification of concepts, not for data analysis or scientific computation.
+This project used AI tools (ChatGPT) only for documentation support, explanation refinement, and formatting assistance, not for scientific analysis or model generation.
 
-How AI Was Used
+---
 
-To help draft and revise written sections such as the introduction, methods descriptions, results summaries, and README content.
+## 🔹 How AI Was Used
 
-To refine explanations of machine-learning workflows, k-mer processing steps, and project structure.
+Drafting and refining written content (introduction, methods, results, README).
 
-To format tables, summaries, and documentation for clearer presentation.
+Improving clarity and structure of explanations and markdown formatting.
 
-To propose workflow improvements and help troubleshoot non-biological coding issues (e.g., file structure, formatting, documentation).
+Formatting tables and summarizing non-biological concepts.
 
-What AI Was Not Used For
+Providing coding guidance for general structure, but not performing biological computation.
 
-No AI tool processed, analyzed, or interpreted genomic data.
+## 🔹 How AI Was Not Used
 
-No AI model generated k-mers, trained machine-learning classifiers, or evaluated results.
+❌ No AI system analyzed genomes, extracted k-mers, trained models, or generated predictions.
 
-All computational steps—including parsing genomes, building feature matrices, training models, calculating metrics, and generating visualizations—were executed entirely through Python code written and validated by the project team.
+❌ No biological interpretations, metrics, or feature importance values were AI-generated.
 
-Manual Verification
+❌ AI was not used to produce or manipulate scientific data in any form.
+
+All scientific results come entirely from the Python code and manual analysis performed by project members.
+
+## 🔹 Verification of AI-Assisted Content
 
 All AI-assisted text was:
 
-Manually reviewed for accuracy and technical correctness.
+Manually reviewed for scientific and technical accuracy.
 
-Checked against Python outputs, datasets, and BV-BRC metadata.
+Checked against actual model outputs and datasets.
 
-Revised or corrected wherever inconsistencies were identified.
+Revised or corrected whenever needed to maintain integrity.
 
-Reproducibility Practices
+No AI-generated content was accepted without human verification.
 
-To ensure full reproducibility:
+## 🔹 Reproducibility Practices
 
-All Python scripts and notebooks used for data processing and modeling are included in the repository.
+All notebooks and Python scripts are included in the repository.
 
-Package versions (Python 3.10, Biopython 1.83, NumPy 1.26, pandas 2.2, scikit-learn 1.4, matplotlib 3.8, seaborn 0.13) are documented in requirements.txt.
+Software versions (Python 3.10, Biopython 1.83, NumPy 1.26, pandas 2.2, scikit-learn 1.4, matplotlib 3.8) are listed in requirements.txt.
 
-Random seeds were fixed for all model-training steps.
+Random seeds were set for reproducible model training.
 
-All datasets used in the project are publicly available from BV-BRC and stored locally in the dataset/ directory for reproducibility.
+Public BV-BRC datasets used in the project are stored inside the dataset/ directory.
 
-Outputs such as ROC curves, confusion matrices, and feature-importance plots are saved in the outputs/ directory.
+All generated outputs (ROC curves, confusion matrices, feature plots) are saved under outputs/.
 
-Ethical Considerations
+🔹 Ethical Considerations
 
-All data used were publicly available bacterial genomes with no human-identifiable information.
+Only public, non-human bacterial genomic data were used.
 
-AI assistance was restricted to communication clarity and documentation, not the scientific validity of the results.
+AI usage stayed within documentation support; no unverified AI-generated scientific claims were included.
+
+All final interpretations reflect human judgment and validation.
