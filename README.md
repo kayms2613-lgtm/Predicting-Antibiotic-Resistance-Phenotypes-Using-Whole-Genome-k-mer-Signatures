@@ -42,8 +42,8 @@ The dataset used in this project consists of:
 ### **Class Balance**
 | Phenotype | Count |
 |-----------|-------|
-| Resistant | 13 |
-| Susceptible | 13 |
+| Resistant | 16 |
+| Susceptible | 10 |
 
 The dataset is balanced and suitable for stratified cross-validation.
 
