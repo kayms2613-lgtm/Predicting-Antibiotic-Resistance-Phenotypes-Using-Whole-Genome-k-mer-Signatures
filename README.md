@@ -105,13 +105,25 @@ The dataset is balanced and suitable for stratified cross-validation.
 - k-mer frequencies normalized using L2 scaling  
 - Variance filtering removes sparse or uninformative features  
 - Resulting feature matrix: **26 isolates × 10,000 features**
+- FASTA parsing with **Biopython 1.83**
+- Extraction of all overlapping **31-mers**
+- Normalization via L2 scaling
+- Variance filtering to select **10,000** informative features
+- Additional `CountVectorizer` matrix for genomic mapping
 
 ### **3. Model Training**
-The following supervised ML classifiers were evaluated:
-- **Logistic Regression**
-- **Random Forest**
-- **Support Vector Machine (SVM)**
-- **Gradient Boosting Classifier**
+Implemented using **scikit-learn 1.4** and gradient-boosting libraries:
+
+| Model | Notes |
+|-------|-------|
+| Logistic Regression | Baseline linear |
+| Random Forest | Strong nonlinear learner |
+| SVM (RBF) | Highest ROC-AUC among baselines |
+| Gradient Boosting | Moderate performance |
+| XGBoost | Stable recall; good interpretability |
+| LightGBM | Highest accuracy + perfect recall |
+| CatBoost | Captures sparse distributed patterns |
+| Tuned MLP | Improved probability calibration |
 
 All models implemented using **scikit-learn 1.4**.
 
@@ -132,13 +144,14 @@ These help interpret biological relevance and model behavior.
 
 ---
 
-## 🧠 Summary of Key Early Findings
+## 🧠 Key Findings
 
-- Whole-genome k-mers **do contain predictive signal** for ciprofloxacin resistance.  
-- Random Forest and SVM outperform simpler models.  
-- Important k-mers align with **biologically meaningful** quinolone resistance regions.  
-- Balanced dataset strengthens evaluation credibility.  
-- Some models show instability due to small sample size.
+- Whole-genome 31-mers **carry strong predictive signal** for ciprofloxacin resistance.  
+- Nonlinear models consistently outperform linear ones.  
+- Top predictive k-mers cluster near **gyrA** and **parC** resistance loci.  
+- Resistant genomes share a stable core set of predictive k-mers.  
+- ~500 bp genomic hotspots appear only in resistant isolates.  
+- Alignment-free k-mer features allow detection of signals *without* gene annotations.
 
 ---
 
