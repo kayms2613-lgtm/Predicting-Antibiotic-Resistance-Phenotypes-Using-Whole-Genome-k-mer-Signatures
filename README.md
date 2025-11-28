@@ -107,7 +107,6 @@ The dataset is balanced and suitable for stratified cross-validation.
 - Resulting feature matrix: **26 isolates × 10,000 features**
 - FASTA parsing with **Biopython 1.83**
 - Extraction of all overlapping **31-mers**
-- Normalization via L2 scaling
 - Variance filtering to select **10,000** informative features
 - Additional `CountVectorizer` matrix for genomic mapping
 
