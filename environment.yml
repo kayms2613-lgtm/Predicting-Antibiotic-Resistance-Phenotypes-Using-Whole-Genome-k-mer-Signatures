@@ -1,0 +1,23 @@
+name: kmer-amr
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - numpy>=1.23
+  - pandas>=1.5
+  - scipy>=1.9
+  - scikit-learn>=1.3
+  - biopython>=1.83
+  - xgboost>=1.7
+  - matplotlib>=3.7
+  - seaborn>=0.13
+  - tqdm>=4.66
+  - jupyter
+  - pip
+  - pip:
+      - kneed
+      - pyfastx
+      - matplotlib-venn
+      - shap
